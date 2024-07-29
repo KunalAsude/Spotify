@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-y: scroll;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    scrollbar-width: thin;
+    scrollbar-color: #0e0e0e #2f2d2d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1919;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #161616;
+    border-radius: 6px;
+}
+
+.left {
+    width: 25vw; /* Adjust width as necessary */
+    background-color: #000; /* Example background color */
+    position: fixed; /* Fix position */
+    top: 0;
+    bottom: 0;
+    scrollbar-width: none; /* Hide scrollbar */
+}
+
+.right {
+    overflow-y: scroll;
+    height: 100vh;
+    width: 75vw;
+    position: fixed;
+    left: 25vw;
+    scrollbar-width: thin;
+    scrollbar-color: #0e0e0e #2f2d2d;
+}
+
+.logo img {
+    height: 40px;
+    width: 150px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.home ul li {
+    list-style: none;
+    width: 20px;
+    display: flex;
+    gap: 25px;
+    padding-top: 20px;
+}
+
+.lib {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+}
+
+.heading {
+    display: flex;
+    gap: 25px;
+    padding-top: 10px;
+}
+
+.heading img {
+    width: 20px;
+}
+
+.footer {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.footer a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(144, 142, 142);
+    font-size: 12px;
+    font-weight: lighter;
+    line-height: 30px;
+}
+
+.button1 {
+    max-width: 100%;
+    display: flex;
+}
+
+.button1 button {
+    height: 35px;
+    width: 90px;
+    background-color: transparent;
+    border-radius: 40px;
+    border: 1px solid white;
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px;
+    font-size: 14px;
+    transition: border 0.1s, height 0.1s, width 0.1s, font-size 0.1s, transform 0.1s;
+}
+
+.button1 button img {
+    height: 15px;
+    width: 25px;
+    transition: transform 0.1s ease;
+}
+
+.button1 button:hover {
+    border: 2px solid white;
+    height: 38px;
+    width: 95px;
+    font-size: 15px;
+}
+
+.button1 button:hover img {
+    transform: scale(1.1);
+}
+
+.header header {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: auto;
+    padding-left: 10px;
+    padding: 10px;
+    background-color: #0e0e0e;
+    justify-content: space-between;
+    border-radius: 7px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.arrows {
+    display: flex;
+    gap: 10px;
+    margin: 5px;
+}
+
+.header header img {
+    height: 17px;
+    width: 17px;
+    padding: 6px;
+}
+
+.signuplogin {
+    display: flex;
+    gap: 10px;
+}
+
+.button2 button {
+    background-color: transparent;
+    border: transparent;
+    color: white;
+    height: 50px;
+    width: 100px;
+    border-radius: 50px;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.button3 button {
+    background-color: white;
+    height: 50px;
+    width: 100px;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.popularartist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 7px;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.maingrida {
+    height: 30vh;
+    width: auto;
+    padding: 5px;
+    margin: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.griditem {
+    height: 28vh;
+    display: flex;
+    padding: 10px;
+    line-height: 1px;
+    position: relative;
+}
+
+.artimg img {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.maingrida h4,
+.maingrida h5 {
+    padding: 4px;
+    margin-left: 7px;
+    margin-top: 25px;
+}
+
+.maingrida .griditem:hover {
+    background-color: #252323;
+    border-radius: 5px;
+}
+
+.maingrida .griditem:hover img {
+    box-shadow: -8px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.maingrida .griditem {
+    position: relative;
+    overflow: hidden;
+}
+
+.maingrida .griditem::after {
+    content: "";
+    position: absolute;
+    bottom: 100px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('images/play_icon.png');
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(0.8);
+}
+
+.maingrida .griditem:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.maingridb {
+    height: 30vh;
+    width: auto;
+}
+
+.gridb {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.griditemb {
+    height: 30vh;
+    display: flex;
+    padding: 10px;
+    line-height: 1px;
+    position: relative;
+}
+
+.artimgb img {
+    height: 140px;
+    width: 140px;
+    border-radius: 15%;
+    object-fit: cover;
+}
+
+.maingridb h4,
+.maingridb h5 {
+    margin-left: 3px;
+    margin-top: 25px;
+}
+
+.maingridb .griditemb:hover {
+    background-color: #252323;
+    border-radius: 5px;
+}
+
+.maingridb .griditemb:hover img {
+    box-shadow: -8px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.maingridb .griditemb {
+    position: relative;
+    overflow: hidden;
+}
+
+.maingridb .griditemb::after {
+    content: "";
+    position: absolute;
+    bottom: 90px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: green;
+    background-image: url('images/play_icon.png');
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(0.8);
+}
+
+.maingridb .griditemb:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.popular {
+    margin: 20px 9px;
+}
+
+.popular h2 {
+    margin: 20px 9px;
+}
+
+.player {
+    height: 55px;
+    max-width:74%;
+    width: 100%;
+    background-color: rgb(221, 221, 221);
+    position: fixed;
+    margin: 5px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    bottom: 5px;
+}
+
+.player img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.playlistbox ul li {
+    height: 60px;
+    width: auto;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 3px 0;
+    overflow-x: hidden;
+    background-color: #1c1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.playlistbox ul {
+    height: 49vh;
+    margin: 5px;
+    padding: 0px 0px;
+    width: 100%;
+    overflow-y: scroll;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    scrollbar-width: thin;
+    scrollbar-color: #0e0e0e #2f2d2d;
+}
+
+.playlistbox ul li img {
+    height: 30px;
+    width: 30px;
+}
+
+.playnow {
+    text-align: center;
+    display: flex;
+    gap: 5px;
+    width: 170px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.playnow span {
+    font-size: 10px;
+    max-width: 100px;
+}
+
+.info {
+    padding: 5px;
+    font-size: 12px;
+    width: 390px;
+}
+
+.seekbar {
+    height: 4px;
+    width: 90%;
+    background-color: #ca6ac0;
+    position: absolute;
+    bottom: 4px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.circle {
+    height: 10px;
+    width: 10px;
+    background-color: #0e0e0e;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    transition: left 0.5s;
+}
+
+.playbarflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    font-size: small;
+}
+
+.songinfo {
+    max-width: 300px;
+    width: auto;
+    overflow: hidden;
+}
+
+.svgs {
+    position: fixed;
+    right: 45%;
+}
+
+.volumerange {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.volumerange img {
+    width: 23px;
+}
+
+.volumerange input {
+    width: 83px;
+    height: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row-reverse;
+}
+
+#library {
+    cursor: pointer;
+}
+
